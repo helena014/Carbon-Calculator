@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Carbon Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+  <!-- Floating background circles -->
+<div class="rings-bg">
+  <div class="ring ring1"></div>
+  <div class="ring ring2"></div>
+  <div class="ring ring3"></div>
+  <div class="ring ring2"></div>
+</div>
+
+ <div class="bubbles">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+
+  <div class="container">
+    <h1>🌱 AI Carbon Calculator</h1>
+    <p class="subtitle">How green is your lifestyle? Answer the questions and find out.</p>
+
+    <form id="carbon-form">
+      <label>
+        🚗 Kilometers you drive per week
+        <input type="range" min="0" max="500" value="50" class="slider" id="km">
+        <span id="km-val">50</span>
+      </label>
+
+      <label>
+        ⚡ Monthly electricity usage (kWh)
+        <input type="range" min="0" max="2000" value="400" class="slider" id="electricity">
+        <span id="elec-val">400</span>
+      </label>
+
+      <label>
+        👪 Number of people in your household
+        <br>
+        <br>
+        <input type="number" min="1" max="10" value="3" id="household">
+      </label>
+
+      <label>🥩 Do you eat meat regularly?
+        <br>
+        <br>
+        <select id="meat">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>♻️ Do you recycle frequently?
+        <br>
+        <br>
+        <select id="recycle">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>🛫 Have you taken flights this year?
+        <br>
+        <br>
+        <select id="flights">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>🚿 Average shower time per day (minutes)
+        <input type="range" min="1" max="20" value="8" class="slider" id="shower">
+        <span id="shower-val">8</span>
+      </label>
+
+      <label>🛍️ Do you use plastic bags regularly?
+        <br>
+        <br>
+        <select id="plastic">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>📦 Number of online orders per month
+        <input type="range" min="0" max="30" value="5" class="slider" id="orders">
+        <span id="orders-val">5</span>
+      </label>
+
+      <label>🚘 Do you own a personal car?
+        <br>
+        <br>
+        <select id="car">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label>🔋 Primary energy source
+        <br>
+        <br>
+        <select id="energy">
+          <option>Renewable (solar/wind)</option>
+          <option>Non-renewable (coal/oil/gas)</option>
+        </select>
+      </label>
+
+      <button type="submit">🌍 Calculate My Carbon Footprint</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+    <div id="ai-advice" class="hidden"></div>
+
+  </div>
+
+  <footer>Made with 💚 for SDG 13 – Climate Action</footer>
+   <br>
+   <br>
+  <script src="script.js"></script>
+</body>
+</html>
